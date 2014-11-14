@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.open.notificacion"
+        version="1.0.1">
+
+    <name>Notificacion</name>
+
+    <description>Send message (subject, text, image) to Android's native share dialog</description>
+    <keywords>share, image, android</keywords>
+    <license>Eclipse Public License - v 1.0</license>
+
+    <author>Jerryg04 (github.com/jerryg04)</author>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <!-- ios -->
+    <platform name="android">
+
+        <config-file target="config.xml" parent="/*">
+		<feature name="Notificacion">
+			<param name="android-package" value="com.open.notificacion.Notificacion"/>
+		</feature>
+        </config-file>
+
+        <js-module src="www/notificacion.js" name="Notificacion">
+            <clobbers target="plugins.notificacion" />
+        </js-module>
+
+		<source-file src="src/android/Notificacion.java" target-dir="src/com/open/notificacion" />
+
+    </platform>
+
+</plugin>
