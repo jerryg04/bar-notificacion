@@ -1,4 +1,4 @@
-package com.open.notificacion;
+package com.notificacionbar.cordova.plugins.notificacionbar;
 import java.io.File;
 
 import org.apache.cordova.CallbackContext;
